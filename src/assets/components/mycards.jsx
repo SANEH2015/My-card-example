@@ -6,19 +6,19 @@ function mycards({accommodation}){
   console.log(accommodation);
 return(
   <div className="main" > 
-     <div className="picbox" style={{backgroundImage:`url(${require("../src/house.jpeg")})`}}>
+     <div className="picbox" >
      <FaRegHeart style={{fontSize:"20px",float:"right",margin:"15px",color:"white",}} />
      </div>
-      <div className="secondbox" style={{ backgroundColor:"white", width:"100%",height:"100px"}}> 
+      <div className="secondbox" style={{ backgroundColor:"white", width:"100%",height:"20%"}}> 
         <span style={{display:"inline-block",fontWeight:"bold",marginRight:"250px"}}>{accommodation.typeofhouse} . {accommodation.year} </span>
          <span style={{display:"block",fontSize:"35px",fontWeight:"bold",marginRight:"350px"}}> {accommodation.price}</span>
           <span style={{display:"block",fontsize:"20px",marginRight:"330px"}}>{accommodation.address}</span>
-      </div>
-        <div className="3rdbox" style={{backgroundColor:"white", width:"100%",height:"100px", display:"flex"}}>
-       <div style={{margin:"10px"}}> <IoBedOutline  size={50} style={{fontsize:"100px"}} /> <span>{accommodation.bedrooms}</span><span>Bedrooms</span></div>
-        <div style={{margin:"10px"}}><LiaBathSolid  size={50} style={{}} /><span>{accommodation.bathroom}</span><span>Bathrooms</span></div>
-        </div>
-        <div className="4thbox" style={{backgroundColor:"whitesmoke", width:"100%",height:"100px"}}>
+      </div><hr></hr>
+        <div className="3rdbox" style={{backgroundColor:"white", width:"100%",height:"20%", display:"flex"}}>
+       <div style={{margin:"40px"}}> <IoBedOutline  size={50} style={{}} /> <span>{accommodation.bedrooms}</span><span>Bedrooms</span></div>
+        <div style={{margin:"40px"}}><LiaBathSolid  size={50} style={{}} /><span>{accommodation.bathroom}</span><span>Bathrooms</span></div>
+        </div> <hr></hr>
+        <div className="4thbox" style={{backgroundColor:"whitesmoke", width:"100%",height:"20%"}}>
         <span style={{float:"left",margin:"10px"}}>REALTOR</span>
         <div className="last">
           <div></div>

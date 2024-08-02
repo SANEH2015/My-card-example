@@ -27,10 +27,11 @@ address:"742 Evergreen Terrace",
 realtorPhon:"(555) 555-4341",
 bathroom:"2 ",
 bedrooms:"3",
-image:"../src/house2.jpg"
-
+url:"../src/house.jpeg"
+ 
    }
-  
+   localStorage.setItem('house',JSON.stringify(house))
+
    let Houseforsale =[
 
    {
@@ -43,7 +44,7 @@ image:"../src/house2.jpg"
       realtorPhon:"(+27) 457-4329",
       bathroom:"2 ",
       bedrooms:"3"  ,
-      image:"./src/assets/house2.jpg",
+      // image:"./src/assets/house2.jpg",
     },
      {
       typeofhouse:"Deached House 2",
@@ -82,9 +83,28 @@ image:"../src/house2.jpg"
    localStorage.setItem('Houseforsale',JSON.stringify(Houseforsale));
    const newhouse = localStorage.getItem("Houseforsale")
    console.log(newhouse)
+   
 
-   function Create(){
-
+   function Create(newlist){
+  
+  const List = JSON.parse(newhouse) ||[];
+   
+  let newObject =  {
+    typeofhouse:"Deached House 4",
+    year:"8y old",
+    realtor:"asanda zulu",
+    bedavalible:"3Bedrooms",
+    price:"$ 800,000",
+    address:"301 Dr pixly",
+    realtorPhon:"(+27) 9135-4341",
+    bathroom:"2 ",
+    bedrooms:"3"
+   }
+   List.push(newlist)
+  const Update = JSON.stringify(List);
+  localStorage.setItem("List",Update);
+   console.log(Update)
+    
    }
 
    function  read(){

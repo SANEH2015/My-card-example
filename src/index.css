@@ -1,5 +1,5 @@
 .picbox{
-
+  background-image: url(../src/house.jpeg);
   width: 100%;
   height:300px;
   background-size: cover;
@@ -10,7 +10,7 @@
   height: 600px;
   border-radius: 10px;
   
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 body{
   margin: 0;
