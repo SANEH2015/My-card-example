@@ -29,3 +29,9 @@ body{
   gap: 10px;
   height: 100vh;
 }
+h1.drink{
+  color: brown;
+}
+p{
+  font-family: sans-serif;
+}

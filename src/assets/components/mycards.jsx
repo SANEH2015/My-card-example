@@ -3,7 +3,7 @@ import { IoBedOutline } from "react-icons/io5";
 import { LiaBathSolid } from "react-icons/lia";
   
 function mycards({accommodation}){
-  console.log(accommodation);
+  // console.log(accommodation);
 return(
   <div className="main" > 
      <div className="picbox" >

@@ -4,7 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Cards from "./assets/components/mycards"
 import Statevariable from './assets/components/Statevariable'
-
+import Tasting_function from './assets/components/Tasting_function'
+import Addbook from './assets/components/Addbook'
+import Displaybook from './assets/components/Display'
+import Updatebook from './assets/components/Updatebook'
+import Deletebook from './assets/components/Deletebook'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -82,42 +86,92 @@ url:"../src/house.jpeg"
    ]
    localStorage.setItem('Houseforsale',JSON.stringify(Houseforsale));
    const newhouse = localStorage.getItem("Houseforsale")
-   console.log(newhouse)
+  //  console.log(newhouse)
    
-
-   function Create(newlist){
   
-  const List = JSON.parse(newhouse) ||[];
+   function push_toList(){
+    
+      alert("add one more thing to the list")
+      
+    
+    console.log("im fine")
+   }
+
+   function Sayhello(hi){
+    let mygreeting = hi
+    return(
+    "sawbona"
+    )
+   }
+  
+   let greeting = Sayhello()
+   console.log(greeting)
+   push_toList()
+
+
+
+  //  function Create(newlist){
+  // let infor = localStorage.getItem("Houseforsale");
+  // let newinfor = infor ? JSON.parse[infor] :[];
+  
+    
+  //  }
+
+  //  function  read(){
+
+  //  }
+
+  //  function Update(){
+
+  //  }
+
+  //  function Delete(){
+    
+  //  }
+
    
-  let newObject =  {
-    typeofhouse:"Deached House 4",
-    year:"8y old",
-    realtor:"asanda zulu",
-    bedavalible:"3Bedrooms",
-    price:"$ 800,000",
-    address:"301 Dr pixly",
-    realtorPhon:"(+27) 9135-4341",
-    bathroom:"2 ",
-    bedrooms:"3"
-   }
-   List.push(newlist)
-  const Update = JSON.stringify(List);
-  localStorage.setItem("List",Update);
-   console.log(Update)
-    
-   }
+   
 
-   function  read(){
 
-   }
-
-   function Update(){
-
-   }
-
-   function Delete(){
-    
-   }
+    let booktable =[
+      {
+        Title:"Alone-art",
+        Num_of_pages:"500",
+        Edition:"New edition",
+        publisher:"Simphiwe zulu",
+        Editor:"Dr mnguni",
+        Cover_page_designer:"Sipho miya",
+        Price:"R500",
+        Format:"pdf",
+        Relice_date:"04/01/2021",
+      },
+      {
+        Title:"Power",
+        Num_of_pages:"100",
+        Edition:"First edition",
+        publisher:"Ayanda keys",
+        Editor:"Dr smith",
+        Cover_page_designer:"z.v Nsele",
+        Price:"R200",
+        Format:"pdf",
+        Relice_date:"05/05/2020",
+      },
+      {
+        Title:"Beautity",
+        Num_of_pages:"300",
+        Edition:"New edition",
+        publisher:"sanele mkhize",
+        Editor:"Dr keys",
+        Cover_page_designer:"Nokwanda",
+        Price:"R100",
+        Format:"pdf",
+        Relice_date:"20/04/2023",
+      }
+     
+    ]
+    localStorage.setItem('booktable',JSON.stringify(booktable));
+    let book_list = []
+  
   return (
     <>
       <Cards accommodation={house} />
@@ -126,6 +180,11 @@ url:"../src/house.jpeg"
       <Cards accommodation ={Houseforsale[2]}/>
 
       <Statevariable/>
+      <Tasting_function/>
+      <Addbook book ={booktable[0]}/>
+      <Displaybook/>
+      <Updatebook/>
+      <Deletebook/>
     </>
   )
 }
